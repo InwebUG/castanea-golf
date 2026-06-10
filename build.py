@@ -639,7 +639,7 @@ PAGES["golfanlage.html"] = {
         <article class="card" data-reveal data-delay="0.1">
           <div class="icon-bubble">🏌️</div>
           <h3>Publiccourse „Castello“</h3>
-          <p>Attraktiver 9-Loch-Platz (Par 27, 1.390 m) mit Course Rating: ideales Training für das kurze Spiel und ein angenehmer Einstieg für Neueinsteiger:innen. Bunker und Bachläufe fordern auch erfahrene Spieler – regelmäßig Austragungsort von Turnieren.</p>
+          <p>Attraktiver 9-Loch-Platz (Par 27, 1.390 m) mit Course Rating: ideales Training für das kurze Spiel und ein angenehmer Einstieg für Neueinsteigende. Bunker und Bachläufe fordern auch erfahrene Spieler – regelmäßig Austragungsort von Turnieren.</p>
         </article>
         <article class="card" data-reveal data-delay="0.2">
           <div class="icon-bubble">💡</div>
