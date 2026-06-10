@@ -41,6 +41,8 @@
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 
+html { overflow-x: clip; }
+
 body {
   font-family: var(--font-body);
   color: var(--gray-text);
@@ -48,6 +50,7 @@ body {
   line-height: 1.65;
   font-size: 1.05rem;
   overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -66,7 +69,7 @@ h3 { font-size: var(--fs-h3); }
 
 .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 .container--narrow { max-width: 900px; }
-section { position: relative; padding: clamp(72px, 9vw, 120px) 0; }
+section { position: relative; padding: clamp(72px, 9vw, 120px) 0; overflow-x: clip; }
 
 .kicker {
   display: inline-flex; align-items: center; gap: 10px;
@@ -707,6 +710,10 @@ section { position: relative; padding: clamp(72px, 9vw, 120px) 0; }
 .price-table tr:last-child td { border-bottom: none; }
 .price-table tr:hover td { background: var(--green-pale); }
 .price-table .pr { font-weight: 700; color: var(--green-deep); white-space: nowrap; }
+@media (max-width: 640px) {
+  .price-table .pr { white-space: normal; }
+  .price-table th, .price-table td { padding: 11px 12px; font-size: .88rem; }
+}
 
 /* Stats */
 .stats-band { background: var(--green-deep); }
