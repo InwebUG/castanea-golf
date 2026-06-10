@@ -423,7 +423,7 @@
 
             /* Alle Karten starten unsichtbar – der Titel steht allein im Bild. */
             CARDS.flat().forEach(sel => gsap.set(sel, {
-                opacity: 0
+                autoAlpha: 0
             }));
 
             /* Intro (nur Titel + Hinweis) – nur am Seitenanfang, sonst kollidiert
@@ -489,31 +489,31 @@
                     tOut = slots[i][1];
                 tl.fromTo(pair[0], {
                         x: -160,
-                        opacity: 0
+                        autoAlpha: 0
                     }, {
                         x: 0,
-                        opacity: 1,
+                        autoAlpha: 1,
                         ease: "power3.out",
                         duration: .7
                     }, tIn)
                     .fromTo(pair[1], {
                         x: 160,
-                        opacity: 0
+                        autoAlpha: 0
                     }, {
                         x: 0,
-                        opacity: 1,
+                        autoAlpha: 1,
                         ease: "power3.out",
                         duration: .7
                     }, tIn + .25)
                     .to(pair[0], {
                         x: -160,
-                        opacity: 0,
+                        autoAlpha: 0,
                         ease: "power2.in",
                         duration: .6
                     }, tOut)
                     .to(pair[1], {
                         x: 160,
-                        opacity: 0,
+                        autoAlpha: 0,
                         ease: "power2.in",
                         duration: .6
                     }, tOut + .15);

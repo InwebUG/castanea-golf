@@ -276,13 +276,14 @@ section { position: relative; padding: clamp(72px, 9vw, 120px) 0; overflow-x: cl
 .pov-loader {
   position: absolute; inset: 0; z-index: 1;
   background: radial-gradient(ellipse at 50% 35%, #1C4A2A 0%, #14381F 55%, #0C2414 100%);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 30px;
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end;
+  gap: 20px;
+  padding: 0 0 7vh clamp(20px, 6vw, 90px);
   transition: opacity .9s ease;
 }
 .pov-pin.is-video .pov-loader { opacity: 0; pointer-events: none; }
 
-.loader-spinner { position: relative; width: 150px; height: 150px; }
+.loader-spinner { position: relative; width: 118px; height: 118px; }
 
 .loader-ring {
   position: absolute; inset: 0; border-radius: 50%;
@@ -304,8 +305,8 @@ section { position: relative; padding: clamp(72px, 9vw, 120px) 0; overflow-x: cl
   will-change: transform;
 }
 .loader-ball {
-  position: absolute; top: -15px; left: 50%;
-  width: 30px; height: 30px; margin-left: -15px;
+  position: absolute; top: -12px; left: 50%;
+  width: 24px; height: 24px; margin-left: -12px;
   border-radius: 50%;
   background: radial-gradient(circle at 32% 28%, #FFFFFF 0%, #F2F2EE 45%, #CDCFc9 85%, #B9BBB5 100%);
   box-shadow: 0 5px 12px rgba(0, 0, 0, .4);
@@ -323,7 +324,7 @@ section { position: relative; padding: clamp(72px, 9vw, 120px) 0; overflow-x: cl
   transform: translate(-50%, -60%);
 }
 .loader-flag .pole {
-  display: block; width: 2.5px; height: 48px;
+  display: block; width: 2.5px; height: 40px;
   background: linear-gradient(to bottom, #F4F4F4, #C9C9C9);
 }
 .loader-flag .flag {
@@ -442,6 +443,7 @@ section { position: relative; padding: clamp(72px, 9vw, 120px) 0; overflow-x: cl
 .pov-final .final-ctas { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 .pov-final-veil {
   position: absolute; inset: 0; z-index: 13;
+  pointer-events: none;
   background: linear-gradient(to bottom, rgba(20, 56, 31, .25), rgba(20, 56, 31, .55));
   opacity: 0;
 }
