@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitglied werden – Golf Resort Adendorf</title>
+<meta name="description" content="Mitgliedschaft im Golf Resort Adendorf: Premium-Spielrechte ab 80 €/Jahr, AfterWork, Studenten- und Jugendtarife – jetzt online beantragen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header is-scrolled">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Golf Resort Adendorf – Startseite">
+      <span class="logo-mark">A</span>
+      <span class="logo-text"><strong>Golf Resort Adendorf</strong><span>Castanea Resort</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="golfanlage.html">Golfanlage</a>
+      <a href="greenfee.html">Greenfee</a>
+      <a href="golf-lernen.html">Golf lernen</a>
+      <a href="mitgliedschaft.html">Mitgliedschaft</a>
+      <a href="gastronomie.html">Castello</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="nav-ext" href="https://www.castanea-resort.de/de" target="_blank" rel="noopener">Hotel</a>
+      <a class="btn btn--gold btn--sm" href="startzeiten.html"><span class="btn-label">Startzeit buchen</span></a>
+    </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile Navigation">
+  <a href="index.html">Start</a>
+  <a href="golfanlage.html">Golfanlage</a>
+  <a href="greenfee.html">Greenfee</a>
+  <a href="golf-lernen.html">Golf lernen</a>
+  <a href="mitgliedschaft.html">Mitgliedschaft</a>
+  <a href="gastronomie.html">Castello</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="https://www.castanea-resort.de/de" target="_blank" rel="noopener">Hotel ↗</a>
+  <a class="btn btn--gold" href="startzeiten.html"><span class="btn-label">Startzeit buchen</span></a>
+</nav>
+
+<main id="content">
+
+  <section class="page-hero">
+    <div class="blob blob--green" style="width:420px;height:420px;top:-100px;right:-140px;"></div>
+    <div class="blob blob--gold" style="width:280px;height:280px;bottom:-110px;left:-90px;"></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrumen" data-reveal>
+        <a href="index.html">Start</a><span class="sep">/</span><span class="current">Mitglied werden</span>
+      </nav>
+      <span class="kicker" data-reveal>Mitgliedschaft</span>
+      <h1 class="split-lines">Ihr Spielrecht. Ihr Tempo.</h1>
+      <p class="lead" data-reveal data-delay="0.15">Unbegrenzt golfen ohne Greenfee: Wählen Sie Ihr Spielrecht und stellen Sie den Antrag direkt online – in drei Minuten erledigt, ohne Aufnahmegebühr.</p>
+      <div class="hero-cta" data-reveal data-delay="0.25"><a class="btn btn--gold" href="#antrag"><span class="btn-label">Direkt zum Online-Antrag</span> <span class="btn-arrow">↓</span></a><a class="btn btn--outline" href="kontakt.html"><span class="btn-label">Beratung gewünscht?</span></a></div>
+    </div>
+  </section>
+
+  <section style="padding-top:24px;">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker" data-reveal>Alle Modelle</span>
+        <h2 class="split-lines">Spielrechte im Überblick</h2>
+        <p data-reveal>Klicken Sie auf ein Modell, um es im Antrag vorzubelegen.</p>
+      </div>
+      <div class="grid grid--3" id="price-grid"></div>
+    </div>
+  </section>
+
+  <section id="antrag" style="background:var(--sand);">
+    <div class="container container--narrow">
+      <div class="section-head section-head--center">
+        <span class="kicker" data-reveal>Online-Antrag</span>
+        <h2 class="split-lines">In 3 Schritten zum Spielrecht</h2>
+      </div>
+
+      <div class="booking-panel" id="wizard">
+        <div class="wizard-progress" data-reveal>
+          <div class="wp-step is-active" data-step="1"><div class="wp-dot">1<span class="wp-label">Spielrecht</span></div><div class="wp-bar"></div></div>
+          <div class="wp-step" data-step="2"><div class="wp-dot">2<span class="wp-label">Ihre Daten</span></div><div class="wp-bar"></div></div>
+          <div class="wp-step" data-step="3"><div class="wp-dot">3<span class="wp-label">Bestätigen</span></div></div>
+        </div>
+
+        <div class="wizard-pane is-active" data-pane="1">
+          <div class="field">
+            <label for="m-modell">Ihr Wunsch-Spielrecht *</label>
+            <select id="m-modell"></select>
+          </div>
+          <div class="booking-summary" id="modell-info"></div>
+          <div class="wizard-nav">
+            <span></span>
+            <button class="btn btn--gold" id="m-to-2" type="button"><span class="btn-label">Weiter</span> <span class="btn-arrow">→</span></button>
+          </div>
+        </div>
+
+        <div class="wizard-pane" data-pane="2">
+          <div class="grid grid--2" style="gap:0 18px;">
+            <div class="field"><label for="m-vorname">Vorname *</label><input id="m-vorname" type="text" autocomplete="given-name"><span class="err-msg">Bitte Vornamen eingeben.</span></div>
+            <div class="field"><label for="m-nachname">Nachname *</label><input id="m-nachname" type="text" autocomplete="family-name"><span class="err-msg">Bitte Nachnamen eingeben.</span></div>
+            <div class="field"><label for="m-email">E-Mail *</label><input id="m-email" type="email" autocomplete="email"><span class="err-msg">Bitte gültige E-Mail eingeben.</span></div>
+            <div class="field"><label for="m-geb">Geburtsdatum *</label><input id="m-geb" type="date"><span class="err-msg">Bitte Geburtsdatum angeben.</span></div>
+            <div class="field"><label for="m-hcp">Handicap (falls vorhanden)</label><input id="m-hcp" type="text" placeholder="z. B. 36 oder PE"></div>
+            <div class="field"><label for="m-telefon">Telefon</label><input id="m-telefon" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field">
+            <div class="check-row">
+              <input id="m-dsgvo" type="checkbox">
+              <label for="m-dsgvo" style="font-weight:400;margin:0;">Ich stimme der Verarbeitung meiner Daten zur Bearbeitung des Antrags zu und habe die <a href="https://www.golf-adendorf.de/datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen. *</label>
+            </div>
+            <span class="err-msg">Bitte stimmen Sie der Datenverarbeitung zu.</span>
+          </div>
+          <div class="wizard-nav">
+            <button class="btn btn--outline" data-back="1" type="button"><span class="btn-label">← Zurück</span></button>
+            <button class="btn btn--gold" id="m-to-3" type="button"><span class="btn-label">Zur Übersicht</span> <span class="btn-arrow">→</span></button>
+          </div>
+        </div>
+
+        <div class="wizard-pane" data-pane="3">
+          <div class="booking-summary"><h3 style="font-size:1.15rem;margin-bottom:12px;">Ihr Antrag</h3><dl id="m-summary"></dl></div>
+          <p class="mt-2" style="font-size:.88rem;">Mit dem Absenden stellen Sie einen Antrag auf Abschluss eines Spielrechtsvertrags. Wir melden uns innerhalb von 24 Stunden mit der Bestätigung – erst mit beidseitiger Unterschrift wird der Vertrag wirksam.</p>
+          <div class="wizard-nav">
+            <button class="btn btn--outline" data-back="2" type="button"><span class="btn-label">← Zurück</span></button>
+            <button class="btn btn--gold btn--lg" id="m-submit" type="button"><span class="btn-label">Antrag verbindlich senden ✓</span></button>
+          </div>
+        </div>
+
+        <div class="wizard-pane" data-pane="4">
+          <div style="text-align:center;padding:24px 0 8px;">
+            <svg class="success-check" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="50"></circle>
+              <path d="M38 62 L54 78 L84 46"></path>
+            </svg>
+            <h3 style="color:var(--green);">Herzlich willkommen im Club!</h3>
+            <p class="mt-1" style="max-width:520px;margin:8px auto 0;">Ihr Antrag<span id="m-success-name"></span> ist eingegangen. Sie erhalten umgehend alle Unterlagen per E-Mail – wir freuen uns auf Ihre erste Runde!</p>
+            <div class="mt-3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+              <a class="btn btn--gold" href="startzeiten.html"><span class="btn-label">Gleich Startzeit buchen</span></a>
+              <a class="btn btn--outline" href="golf-lernen.html"><span class="btn-label">Kurse entdecken</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-2 text-center" style="font-size:.85rem;" data-reveal>Beispiel-Antragsstrecke. Auf der Live-Website: PDF-Spielrechtsvertrag zum Ausfüllen sowie Angebots-Funnels über <strong>mitfit</strong> (angebote.mitfit.de).</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid grid--3">
+        <div class="card" data-reveal>
+          <div class="icon-bubble">🤝</div>
+          <h3 style="font-size:1.25rem;">Partneranlagen</h3>
+          <p>Als Mitglied profitieren Sie von Greenfee-Rabatten bei Green Eagle, GC Brunstorf, GC Bad Bevensen, GCC am Hockenberg und GC Escheburg.</p>
+        </div>
+        <div class="card" data-reveal data-delay="0.1">
+          <div class="icon-bubble">🃏</div>
+          <h3 style="font-size:1.25rem;">Heide Golf Card</h3>
+          <p>Mit dem „Ass im Bag“ spielen Sie uneingeschränkt von Montag bis Sonntag auf unserer Anlage.</p>
+        </div>
+        <div class="card" data-reveal data-delay="0.2">
+          <div class="icon-bubble">🏆</div>
+          <h3 style="font-size:1.25rem;">Turniere &amp; Mannschaften</h3>
+          <p>Vom offenen Herrentag bis zur Clubmeisterschaft – sechs Mannschaften von Liga bis AK 70 freuen sich auf Verstärkung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="cta-band" data-reveal="scale">
+        <h2>Bereit für den ersten Abschlag?</h2>
+        <p>Buchen Sie Ihre Startzeit in unter einer Minute – oder sichern Sie sich Ihr Spielrecht für die ganze Saison.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn--gold btn--lg" href="startzeiten.html"><span class="btn-label">Startzeit buchen</span> <span class="btn-arrow">→</span></a>
+          <a class="btn btn--white btn--lg" href="mitgliedschaft.html"><span class="btn-label">Mitglied werden</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><span class="logo-mark">A</span><span class="logo-text"><strong>Golf Resort Adendorf</strong><span>Castanea Resort</span></span></a>
+        <p>Castanea Resort Golf Course<br>Moorchaussee 3<br>21365 Adendorf</p>
+        <p class="mt-1"><a href="mailto:golf@castanea-resort.de">golf@castanea-resort.de</a><a href="tel:+49413122332660">04131 22 33 26 60</a></p>
+      </div>
+      <div>
+        <h6>Golf spielen</h6>
+        <a href="startzeiten.html">Startzeiten</a>
+        <a href="greenfee.html">Greenfee</a>
+        <a href="golfanlage.html">Golfanlage &amp; Platzdaten</a>
+        <a href="golf-lernen.html">Golf lernen</a>
+      </div>
+      <div>
+        <h6>Club &amp; Resort</h6>
+        <a href="mitgliedschaft.html">Mitglied werden</a>
+        <a href="gastronomie.html">Gastronomie „Castello“</a>
+        <a href="https://www.castanea-resort.de/de" target="_blank" rel="noopener">Hotel „Castanea“ ↗</a>
+        <a href="http://www.residenzhotel.de/" target="_blank" rel="noopener">Hotel „Residenz“ ↗</a>
+        <a href="kontakt.html">Kontakt &amp; Anfahrt</a>
+      </div>
+      <div>
+        <h6>Rechtliches</h6>
+        <a href="https://www.golf-adendorf.de/impressum.html" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://www.golf-adendorf.de/datenschutz.html" target="_blank" rel="noopener">Datenschutz</a>
+        <a href="https://www.golf-adendorf.de/barrierefreiheitserklaerung.html" target="_blank" rel="noopener">Barrierefreiheit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Golf Resort Adendorf KG</span>
+      <span class="footer-claim">Golf für alle.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cta-dock">
+  <a class="btn btn--gold" href="startzeiten.html"><span class="btn-label">⛳ Startzeit buchen</span></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  "use strict";
+  /* Preiskarten */
+  var grid = document.getElementById("price-grid");
+  grid.innerHTML = GA_MITGLIEDSCHAFTEN.map(function (m, i) {
+    return '<div class="price-card' + (m.featured ? " is-featured" : "") + '" data-reveal data-delay="' + ((i % 3) * 0.08) + '" data-id="' + m.id + '">' +
+      (m.badge ? '<span class="badge">' + m.badge + "</span>" : "") +
+      "<h3>" + m.name + '</h3><div class="price">' + m.preis.toLocaleString("de-DE") + " €<small> / Jahr</small></div><ul>" +
+      m.leistungen.map(function (l) { return "<li>" + l + "</li>"; }).join("") +
+      '</ul><span class="btn btn--sm btn--outline"><span class="btn-label">Dieses Modell wählen</span></span></div>';
+  }).join("");
+  if (window.gaInitReveals) window.gaInitReveals();
+
+  /* Wizard */
+  var sel = document.getElementById("m-modell");
+  sel.innerHTML = GA_MITGLIEDSCHAFTEN.map(function (m) {
+    return '<option value="' + m.id + '">' + m.name + " – " + m.preis.toLocaleString("de-DE") + " €/Jahr</option>";
+  }).join("");
+
+  function modell() {
+    return GA_MITGLIEDSCHAFTEN.find(function (m) { return m.id === sel.value; });
+  }
+  function renderInfo() {
+    var m = modell();
+    document.getElementById("modell-info").innerHTML =
+      '<h3 style="font-size:1.15rem;margin-bottom:10px;">' + m.name + "</h3><dl>" +
+      "<dt>Jahresbeitrag</dt><dd>" + m.preis.toLocaleString("de-DE") + " €</dd>" +
+      "<dt>Leistungen</dt><dd>" + m.leistungen.join(" · ") + "</dd></dl>";
+  }
+  sel.addEventListener("change", renderInfo);
+  renderInfo();
+
+  grid.addEventListener("click", function (e) {
+    var card = e.target.closest(".price-card");
+    if (!card) return;
+    sel.value = card.getAttribute("data-id");
+    renderInfo();
+    document.getElementById("antrag").scrollIntoView({ behavior: "smooth" });
+  });
+
+  /* Vorauswahl per URL (?modell=id) */
+  var pre = new URLSearchParams(location.search).get("modell");
+  if (pre && GA_MITGLIEDSCHAFTEN.some(function (m) { return m.id === pre; })) {
+    sel.value = pre; renderInfo();
+    setTimeout(function () { document.getElementById("antrag").scrollIntoView({ behavior: "smooth" }); }, 400);
+  }
+
+  function goto(step) {
+    document.querySelectorAll(".wizard-pane").forEach(function (p) {
+      p.classList.toggle("is-active", p.getAttribute("data-pane") == step);
+    });
+    document.querySelectorAll(".wp-step").forEach(function (s) {
+      var n = parseInt(s.getAttribute("data-step"), 10);
+      s.classList.toggle("is-active", n === step);
+      s.classList.toggle("is-done", n < step);
+    });
+    var y = document.getElementById("wizard").getBoundingClientRect().top + window.scrollY - 110;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+  document.querySelectorAll("[data-back]").forEach(function (b) {
+    b.addEventListener("click", function () { goto(parseInt(b.getAttribute("data-back"), 10)); });
+  });
+  function val(id) { return document.getElementById(id).value.trim(); }
+  function bad(id, isBad) {
+    var el = document.getElementById(id);
+    el.classList.toggle("is-error", isBad);
+    el.closest(".field").classList.toggle("show-error", isBad);
+    return isBad;
+  }
+
+  document.getElementById("m-to-2").addEventListener("click", function () { goto(2); });
+  document.getElementById("m-to-3").addEventListener("click", function () {
+    var b = false;
+    b = bad("m-vorname", !val("m-vorname")) || b;
+    b = bad("m-nachname", !val("m-nachname")) || b;
+    b = bad("m-email", !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val("m-email"))) || b;
+    b = bad("m-geb", !val("m-geb")) || b;
+    var ds = document.getElementById("m-dsgvo");
+    ds.closest(".field").classList.toggle("show-error", !ds.checked);
+    if (!ds.checked) b = true;
+    if (b) return;
+    var m = modell();
+    document.getElementById("m-summary").innerHTML =
+      "<dt>Spielrecht</dt><dd>" + m.name + "</dd>" +
+      "<dt>Jahresbeitrag</dt><dd>" + m.preis.toLocaleString("de-DE") + " € (zzgl. ggf. Verbandsbeiträge)</dd>" +
+      "<dt>Name</dt><dd>" + val("m-vorname") + " " + val("m-nachname") + "</dd>" +
+      "<dt>E-Mail</dt><dd>" + val("m-email") + "</dd>" +
+      "<dt>Geburtsdatum</dt><dd>" + val("m-geb").split("-").reverse().join(".") + "</dd>" +
+      (val("m-hcp") ? "<dt>Handicap</dt><dd>" + val("m-hcp") + "</dd>" : "");
+    goto(3);
+  });
+  document.getElementById("m-submit").addEventListener("click", function () {
+    document.getElementById("m-success-name").textContent = ", " + val("m-vorname");
+    goto(4);
+    document.querySelectorAll(".wp-step").forEach(function (s) { s.classList.add("is-done"); s.classList.remove("is-active"); });
+  });
+})();
+</script>
+</body>
+</html>

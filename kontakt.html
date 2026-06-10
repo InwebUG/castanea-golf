@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt & Anfahrt – Golf Resort Adendorf</title>
+<meta name="description" content="Kontakt zum Golf Resort Adendorf: Moorchaussee 3, 21365 Adendorf · 04131 22 33 26 60 · golf@castanea-resort.de">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header is-scrolled">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Golf Resort Adendorf – Startseite">
+      <span class="logo-mark">A</span>
+      <span class="logo-text"><strong>Golf Resort Adendorf</strong><span>Castanea Resort</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="golfanlage.html">Golfanlage</a>
+      <a href="greenfee.html">Greenfee</a>
+      <a href="golf-lernen.html">Golf lernen</a>
+      <a href="mitgliedschaft.html">Mitgliedschaft</a>
+      <a href="gastronomie.html">Castello</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="nav-ext" href="https://www.castanea-resort.de/de" target="_blank" rel="noopener">Hotel</a>
+      <a class="btn btn--gold btn--sm" href="startzeiten.html"><span class="btn-label">Startzeit buchen</span></a>
+    </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-label="Mobile Navigation">
+  <a href="index.html">Start</a>
+  <a href="golfanlage.html">Golfanlage</a>
+  <a href="greenfee.html">Greenfee</a>
+  <a href="golf-lernen.html">Golf lernen</a>
+  <a href="mitgliedschaft.html">Mitgliedschaft</a>
+  <a href="gastronomie.html">Castello</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="https://www.castanea-resort.de/de" target="_blank" rel="noopener">Hotel ↗</a>
+  <a class="btn btn--gold" href="startzeiten.html"><span class="btn-label">Startzeit buchen</span></a>
+</nav>
+
+<main id="content">
+
+  <section class="page-hero">
+    <div class="blob blob--green" style="width:420px;height:420px;top:-100px;right:-140px;"></div>
+    <div class="blob blob--gold" style="width:280px;height:280px;bottom:-110px;left:-90px;"></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrumen" data-reveal>
+        <a href="index.html">Start</a><span class="sep">/</span><span class="current">Kontakt</span>
+      </nav>
+      <span class="kicker" data-reveal>Wir freuen uns auf Sie</span>
+      <h1 class="split-lines">Kontakt &amp; Anfahrt</h1>
+      <p class="lead" data-reveal data-delay="0.15">Fragen zu Startzeiten, Mitgliedschaft oder Kursen? Das Clubsekretariat ist täglich von 8 bis 17 Uhr für Sie da.</p>
+      
+    </div>
+  </section>
+
+  <section style="padding-top:24px;">
+    <div class="container">
+      <div class="grid grid--2" style="gap:clamp(32px,5vw,64px);align-items:start;">
+        <div class="card" data-reveal style="padding:36px;">
+          <h3 class="mb-2">Schreiben Sie uns</h3>
+          <form id="kontakt-form" novalidate>
+            <div class="field">
+              <label for="k-anrede">Anrede *</label>
+              <select id="k-anrede"><option>Herr</option><option>Frau</option><option>Divers</option></select>
+            </div>
+            <div class="grid grid--2" style="gap:0 16px;">
+              <div class="field"><label for="k-vorname">Vorname *</label><input id="k-vorname" type="text" autocomplete="given-name"><span class="err-msg">Bitte Vornamen eingeben.</span></div>
+              <div class="field"><label for="k-name">Name *</label><input id="k-name" type="text" autocomplete="family-name"><span class="err-msg">Bitte Namen eingeben.</span></div>
+            </div>
+            <div class="field"><label for="k-email">E-Mail *</label><input id="k-email" type="email" autocomplete="email"><span class="err-msg">Bitte gültige E-Mail eingeben.</span></div>
+            <div class="field"><label for="k-betreff">Betreff *</label><input id="k-betreff" type="text"><span class="err-msg">Bitte Betreff eingeben.</span></div>
+            <div class="field"><label for="k-nachricht">Nachricht *</label><textarea id="k-nachricht"></textarea><span class="err-msg">Bitte Nachricht eingeben.</span></div>
+            <div class="field">
+              <div class="check-row">
+                <input id="k-dsgvo" type="checkbox">
+                <label for="k-dsgvo" style="font-weight:400;margin:0;">Ich bin mit der Verarbeitung meiner personenbezogenen Daten einverstanden und habe die <a href="https://www.golf-adendorf.de/datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> zur Kenntnis genommen. *</label>
+              </div>
+              <span class="err-msg">Bitte stimmen Sie zu.</span>
+            </div>
+            <button class="btn btn--gold" type="submit"><span class="btn-label">Senden</span> <span class="btn-arrow">→</span></button>
+            <p id="kontakt-success" style="display:none;color:var(--green);font-weight:700;margin-top:14px;">✓ Vielen Dank! Wir melden uns umgehend.</p>
+          </form>
+        </div>
+        <div>
+          <div class="card" data-reveal="right" style="margin-bottom:24px;">
+            <div class="icon-bubble">📍</div>
+            <h3 style="font-size:1.3rem;">Castanea Resort Golf Course</h3>
+            <p>Moorchaussee 3<br>21365 Adendorf</p>
+            <p class="mt-2">
+              <a href="tel:+49413122332660">04131 22 33 26 60</a><br>
+              <a href="mailto:golf@castanea-resort.de">golf@castanea-resort.de</a>
+            </p>
+            <p class="mt-2" style="font-size:.92rem;">Sekretariat täglich 8 – 17 Uhr</p>
+          </div>
+          <div class="card" data-reveal="right" data-delay="0.1" style="background:var(--green-pale);border-color:rgba(46,107,62,.3);">
+            <div class="icon-bubble">🚗</div>
+            <h3 style="font-size:1.3rem;">Anfahrt</h3>
+            <p style="font-size:.95rem;">Nur 5 Minuten von Lüneburg: über die B209 Richtung Adendorf, dann der Beschilderung „Castanea Resort“ folgen. Kostenlose Parkplätze direkt an der Anlage.</p>
+            <a class="link-more mt-2" href="https://maps.google.com/?q=Moorchaussee+3,+21365+Adendorf" target="_blank" rel="noopener">Route in Google Maps öffnen ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="cta-band" data-reveal="scale">
+        <h2>Bereit für den ersten Abschlag?</h2>
+        <p>Buchen Sie Ihre Startzeit in unter einer Minute – oder sichern Sie sich Ihr Spielrecht für die ganze Saison.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a class="btn btn--gold btn--lg" href="startzeiten.html"><span class="btn-label">Startzeit buchen</span> <span class="btn-arrow">→</span></a>
+          <a class="btn btn--white btn--lg" href="mitgliedschaft.html"><span class="btn-label">Mitglied werden</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><span class="logo-mark">A</span><span class="logo-text"><strong>Golf Resort Adendorf</strong><span>Castanea Resort</span></span></a>
+        <p>Castanea Resort Golf Course<br>Moorchaussee 3<br>21365 Adendorf</p>
+        <p class="mt-1"><a href="mailto:golf@castanea-resort.de">golf@castanea-resort.de</a><a href="tel:+49413122332660">04131 22 33 26 60</a></p>
+      </div>
+      <div>
+        <h6>Golf spielen</h6>
+        <a href="startzeiten.html">Startzeiten</a>
+        <a href="greenfee.html">Greenfee</a>
+        <a href="golfanlage.html">Golfanlage &amp; Platzdaten</a>
+        <a href="golf-lernen.html">Golf lernen</a>
+      </div>
+      <div>
+        <h6>Club &amp; Resort</h6>
+        <a href="mitgliedschaft.html">Mitglied werden</a>
+        <a href="gastronomie.html">Gastronomie „Castello“</a>
+        <a href="https://www.castanea-resort.de/de" target="_blank" rel="noopener">Hotel „Castanea“ ↗</a>
+        <a href="http://www.residenzhotel.de/" target="_blank" rel="noopener">Hotel „Residenz“ ↗</a>
+        <a href="kontakt.html">Kontakt &amp; Anfahrt</a>
+      </div>
+      <div>
+        <h6>Rechtliches</h6>
+        <a href="https://www.golf-adendorf.de/impressum.html" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://www.golf-adendorf.de/datenschutz.html" target="_blank" rel="noopener">Datenschutz</a>
+        <a href="https://www.golf-adendorf.de/barrierefreiheitserklaerung.html" target="_blank" rel="noopener">Barrierefreiheit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Golf Resort Adendorf KG</span>
+      <span class="footer-claim">Golf für alle.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cta-dock">
+  <a class="btn btn--gold" href="startzeiten.html"><span class="btn-label">⛳ Startzeit buchen</span></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  "use strict";
+  var form = document.getElementById("kontakt-form");
+  if (!form) return;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var ok = true;
+    ["k-vorname", "k-name", "k-betreff", "k-nachricht"].forEach(function (id) {
+      var el = document.getElementById(id);
+      var bad = !el.value.trim();
+      el.classList.toggle("is-error", bad);
+      el.closest(".field").classList.toggle("show-error", bad);
+      if (bad) ok = false;
+    });
+    var mail = document.getElementById("k-email");
+    var mailBad = !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail.value.trim());
+    mail.classList.toggle("is-error", mailBad);
+    mail.closest(".field").classList.toggle("show-error", mailBad);
+    if (mailBad) ok = false;
+    var ds = document.getElementById("k-dsgvo");
+    ds.closest(".field").classList.toggle("show-error", !ds.checked);
+    if (!ds.checked) ok = false;
+    if (!ok) return;
+    form.querySelectorAll("input, textarea, select, button").forEach(function (el) { el.disabled = true; });
+    document.getElementById("kontakt-success").style.display = "block";
+  });
+})();
+</script>
+</body>
+</html>
