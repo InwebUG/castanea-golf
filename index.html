@@ -61,65 +61,17 @@
     </video>
             <div class="pov-vignette" aria-hidden="true"></div>
 
-            <div class="pov-scene" aria-hidden="true">
-
-                <div class="pov-sky">
-                    <div class="pov-sun"></div>
-                    <div class="pov-cloud" style="top:12%;left:8%;width:180px;height:44px;"></div>
-                    <div class="pov-cloud" style="top:24%;left:58%;width:240px;height:54px;"></div>
-                    <div class="pov-cloud" style="top:7%;left:74%;width:150px;height:38px;"></div>
-                    <div class="pov-cloud" style="top:33%;left:22%;width:130px;height:34px;"></div>
-                </div>
-
-                <div class="pov-trees" id="pov-trees">
-                    <svg viewBox="0 0 1200 110" preserveAspectRatio="none">
-          <path fill="#28522F" d="M0,110 L0,72 Q30,48 60,66 Q82,38 110,58 Q140,30 170,56 Q198,44 222,62 Q255,28 290,58 Q318,46 340,64 Q370,36 405,60 Q436,48 460,66 Q492,30 530,58 Q558,44 580,62 Q610,34 645,58 Q676,46 700,64 Q730,38 765,60 Q796,30 830,56 Q860,44 884,62 Q915,34 950,58 Q980,46 1004,64 Q1035,36 1070,58 Q1100,44 1124,62 Q1155,40 1200,66 L1200,110 Z"/>
-          <path fill="#1C3F24" opacity=".85" d="M0,110 L0,84 Q40,64 80,80 Q115,58 150,76 Q190,54 230,76 Q268,62 300,80 Q340,56 385,78 Q420,64 455,80 Q495,58 540,78 Q578,66 610,82 Q650,60 695,80 Q730,66 765,82 Q805,58 850,78 Q888,66 920,82 Q960,60 1005,80 Q1040,66 1075,82 Q1115,62 1200,82 L1200,110 Z"/>
-        </svg>
-                </div>
-
-                <div class="pov-ground">
-                    <div class="pov-fairway" id="pov-fairway"></div>
-                    <div class="pov-rough-l"></div>
-                    <div class="pov-rough-r"></div>
-                    <div class="pov-bunker" id="pov-bunker-l" style="left:18%;top:34%;width:90px;height:34px;"></div>
-                    <div class="pov-bunker" id="pov-bunker-r" style="right:16%;top:52%;width:120px;height:44px;"></div>
-                </div>
-
-                <div class="pov-green" id="pov-green">
-                    <div class="green-disc"></div>
-                    <div class="pov-hole"></div>
-                    <div class="pov-flagpole">
-                        <div class="pov-flag"></div>
+            <!-- Golfball-Loader: Ladeanimation & Fallback (rein CSS, keine Assets) -->
+            <div class="pov-loader" id="pov-loader" aria-hidden="true">
+                <div class="loader-spinner">
+                    <div class="loader-ring"></div>
+                    <div class="loader-arc"></div>
+                    <div class="loader-orbit">
+                        <div class="loader-ball"></div>
                     </div>
+                    <div class="loader-flag"><span class="pole"></span><span class="flag"></span></div>
                 </div>
-
-                <div class="pov-ball-shadow" id="pov-ball-shadow"></div>
-                <div class="pov-ball" id="pov-ball"></div>
-
-                <div class="pov-club" id="pov-club">
-                    <svg viewBox="0 0 340 420">
-          <g>
-            <rect x="296" y="-30" width="11" height="360" rx="5.5" fill="url(#shaft)" transform="rotate(14 300 0)"/>
-            <path d="M196 318 Q160 306 142 330 Q128 350 142 372 Q158 392 196 388 Q240 384 252 354 Q258 332 240 322 Q220 312 196 318 Z" fill="#2B2B28"/>
-            <path d="M196 318 Q160 306 142 330 Q128 350 142 372 Q158 392 196 388 L196 318 Z" fill="#3A3A36"/>
-            <ellipse cx="196" cy="352" rx="14" ry="22" fill="#C9A546" opacity=".7"/>
-          </g>
-          <defs>
-            <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#D8D8D4"/><stop offset="1" stop-color="#8E8E88"/>
-            </linearGradient>
-          </defs>
-        </svg>
-                </div>
-
-                <div class="pov-speedlines" id="pov-speedlines">
-                    <i style="--x:-30px;--y:30%;--r:8deg;"></i>
-                    <i style="--x:24px;--y:26%;--r:-6deg;"></i>
-                    <i style="--x:-80px;--y:42%;--r:14deg;"></i>
-                    <i style="--x:70px;--y:38%;--r:-12deg;"></i>
-                    <i style="--x:0px;--y:20%;--r:0deg;"></i>
-                </div>
+                <p class="loader-caption" id="loader-caption">Der Platz wird vorbereitet …</p>
             </div>
 
             <!-- Zentrale Headline -->
@@ -255,8 +207,8 @@
                                     <p>Abschlagplätze Range</p>
                                 </div>
                                 <div>
-                                    <h3 style="font-size:2.4rem;color:var(--gold);"><span data-count="80" data-suffix=" €">0</span></h3>
-                                    <p>Mitgliedschaft ab/Jahr</p>
+                                    <h3 style="font-size:2.4rem;color:var(--gold);"><span data-count="9">0</span></h3>
+                                    <p>verschiedene Mitgliedschaften</p>
                                 </div>
                             </div>
                         </div>
@@ -409,13 +361,12 @@
     <script src="js/main.js"></script>
     <script>
         /* =====================================================================
-                           POV-HERO: Golfschuss aus der Ego-Perspektive
-                           Echtes Drohnen-Footage (Pexels, lizenzfrei), per Scroll gescrubbt.
-                           Fällt automatisch auf die gezeichnete CSS-Szene zurück, wenn das
-                           Video nicht geladen werden kann.
-                           Ablauf: Titel allein → 3 Karten-Paare nacheinander → Finale.
-                           Karten und Texte überlappen sich nie.
-                           ===================================================================== */
+                   POV-HERO: Golfschuss aus der Ego-Perspektive
+                   Echtes Drohnen-Footage (Pexels, lizenzfrei), per Scroll gescrubbt.
+                   Während des Ladens – und falls das Video nie ankommt – läuft ein
+                   leichtgewichtiger Golfball-Loader (rein CSS, keine Assets).
+                   Titel, Karten-Paare und Finale funktionieren davon unabhängig sofort.
+                   ===================================================================== */
         (function() {
             "use strict";
 
@@ -445,7 +396,12 @@
             if (window.gaInitReveals) window.gaInitReveals();
 
             const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            const pin = document.getElementById("pov-pin");
             const final_ = document.getElementById("pov-final");
+
+            /* Loader & Video liegen auf dunklem Grund → helle Texte/Karten */
+            pin.classList.add("is-dark");
+
             if (typeof gsap === "undefined" || reduced) {
                 const stage = document.getElementById("pov-stage");
                 if (stage) stage.style.height = "100vh";
@@ -457,8 +413,8 @@
             }
             gsap.registerPlugin(ScrollTrigger);
 
-            const pin = document.getElementById("pov-pin");
             const video = document.getElementById("pov-video");
+            const caption = document.getElementById("loader-caption");
             const CARDS = [
                 ["#pov-card-1l", "#pov-card-1r"],
                 ["#pov-card-2l", "#pov-card-2r"],
@@ -470,278 +426,154 @@
                 opacity: 0
             }));
 
-            /* Intro (nur Titel + Hinweis) */
-            gsap.from("#pov-title h1", {
-                y: 60,
-                opacity: 0,
-                duration: 1.3,
-                ease: "power4.out",
-                delay: .15
-            });
-            gsap.from("#pov-title .pov-sub", {
-                y: 26,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out",
-                delay: .4
-            });
-            gsap.from("#pov-hint", {
-                opacity: 0,
-                duration: 1,
-                delay: 1
-            });
-
-            /* Wolken der Fallback-Szene treiben dauerhaft */
-            document.querySelectorAll(".pov-cloud").forEach((c, i) => {
-                gsap.to(c, {
-                    x: (i % 2 ? -60 : 60),
-                    duration: 14 + i * 4,
-                    yoyo: true,
-                    repeat: -1,
-                    ease: "sine.inOut"
+            /* Intro (nur Titel + Hinweis) – nur am Seitenanfang, sonst kollidiert
+               der Intro-Tween mit dem Scrub-Zustand nach Scroll-Wiederherstellung */
+            if (window.scrollY < 50) {
+                gsap.from("#pov-title h1", {
+                    y: 60,
+                    opacity: 0,
+                    duration: 1.3,
+                    ease: "power4.out",
+                    delay: .15
                 });
-            });
-
-            /* ------------------------------------------------------------------
-               Gemeinsame Timeline: Titel raus → 3 Karten-Paare → Finale.
-               Hintergrund (Video-Scrub ODER CSS-Szene) wird je nach Modus ergänzt.
-               ------------------------------------------------------------------ */
-            function buildTimeline(mode) {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: "#pov-stage",
-                        start: "top top",
-                        end: "bottom bottom",
-                        scrub: 1,
-                        onUpdate(self) {
-                            final_.classList.toggle("is-live", self.progress > 0.8);
-                        }
-                    }
+                gsap.from("#pov-title .pov-sub", {
+                    y: 26,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    delay: .4
                 });
-
-                /* Titel verabschiedet sich, bevor die erste Karte kommt */
-                tl.to("#pov-title", {
-                        opacity: 0,
-                        y: -60,
-                        ease: "power1.in",
-                        duration: .9
-                    }, .4)
-                    .to("#pov-hint", {
-                        opacity: 0,
-                        duration: .4
-                    }, .3);
-
-                /* Drei Karten-Paare nacheinander – nie gleichzeitig mit Titel/Finale */
-                const slots = [
-                    [1.6, 3.2],
-                    [3.8, 5.4],
-                    [6.0, 7.4]
-                ];
-                CARDS.forEach((pair, i) => {
-                    const [tIn, tOut] = slots[i];
-                    tl.fromTo(pair[0], {
-                            x: -160,
-                            opacity: 0
-                        }, {
-                            x: 0,
-                            opacity: 1,
-                            ease: "power3.out",
-                            duration: .7
-                        }, tIn)
-                        .fromTo(pair[1], {
-                            x: 160,
-                            opacity: 0
-                        }, {
-                            x: 0,
-                            opacity: 1,
-                            ease: "power3.out",
-                            duration: .7
-                        }, tIn + .25)
-                        .to(pair[0], {
-                            x: -160,
-                            opacity: 0,
-                            ease: "power2.in",
-                            duration: .6
-                        }, tOut)
-                        .to(pair[1], {
-                            x: 160,
-                            opacity: 0,
-                            ease: "power2.in",
-                            duration: .6
-                        }, tOut + .15);
+                gsap.from("#pov-hint", {
+                    opacity: 0,
+                    duration: 1,
+                    delay: 1
                 });
-
-                /* Finale – erscheint erst, wenn alle Karten draußen sind */
-                tl.to("#pov-veil", {
-                        opacity: 1,
-                        duration: 1.1
-                    }, 8.0)
-                    .fromTo("#pov-final", {
-                        opacity: 0,
-                        scale: .92
-                    }, {
-                        opacity: 1,
-                        scale: 1,
-                        ease: "power3.out",
-                        duration: 1.1
-                    }, 8.3)
-                    .to({}, {
-                        duration: .7
-                    });
-
-                /* Hintergrund */
-                if (mode === "video") {
-                    /* Das Drohnen-Footage fliegt übers Fairway – die Kamera "ist" der Ball */
-                    tl.to(video, {
-                        currentTime: Math.max(0, video.duration - 0.05),
-                        ease: "none",
-                        duration: 9.3
-                    }, 0);
-                } else {
-                    tl.to("#pov-club", {
-                            rotation: -118,
-                            ease: "power2.inOut",
-                            duration: 1.1
-                        }, 0)
-                        .to("#pov-club", {
-                            rotation: 95,
-                            ease: "power4.in",
-                            duration: .4
-                        }, 1.15)
-                        .fromTo("#pov-speedlines", {
-                            opacity: 0
-                        }, {
-                            opacity: 1,
-                            duration: .12
-                        }, 1.5)
-                        .to("#pov-speedlines", {
-                            opacity: 0,
-                            duration: .4
-                        }, 1.75)
-                        .to("#pov-club", {
-                            rotation: 150,
-                            y: 60,
-                            opacity: 0,
-                            ease: "power2.out",
-                            duration: .6
-                        }, 1.65)
-                        .to("#pov-ball", {
-                            keyframes: [{
-                                y: -window.innerHeight * .52,
-                                scale: .32,
-                                duration: 1.8,
-                                ease: "power2.out"
-                            }, {
-                                y: -window.innerHeight * .60,
-                                scale: .1,
-                                duration: 2.2,
-                                ease: "power1.inOut"
-                            }, {
-                                y: -window.innerHeight * .545,
-                                scale: .045,
-                                duration: 1.4,
-                                ease: "power1.in"
-                            }]
-                        }, 1.55)
-                        .to("#pov-ball-shadow", {
-                            opacity: 0,
-                            scale: .3,
-                            duration: .8
-                        }, 1.55)
-                        .to("#pov-fairway", {
-                            backgroundPosition: "0 2900px, 0 0",
-                            ease: "power1.inOut",
-                            duration: 5.6
-                        }, 1.6)
-                        .to("#pov-trees", {
-                            scale: 3.4,
-                            y: 90,
-                            ease: "power1.in",
-                            duration: 5.6
-                        }, 1.6)
-                        .to("#pov-bunker-l", {
-                            scale: 7,
-                            x: -420,
-                            y: 260,
-                            opacity: 0,
-                            ease: "power1.in",
-                            duration: 3.2
-                        }, 1.9)
-                        .to("#pov-bunker-r", {
-                            scale: 8,
-                            x: 460,
-                            y: 300,
-                            opacity: 0,
-                            ease: "power1.in",
-                            duration: 3.6
-                        }, 2.3)
-                        .to("#pov-green", {
-                            scale: 13,
-                            y: 70,
-                            ease: "power2.in",
-                            duration: 5.6
-                        }, 1.6)
-                        .to(".pov-sun", {
-                            y: 60,
-                            scale: 1.3,
-                            duration: 5.6,
-                            ease: "none"
-                        }, 1.6)
-                        .to("#pov-ball", {
-                            keyframes: [{
-                                y: -window.innerHeight * .40,
-                                scale: .09,
-                                duration: .5,
-                                ease: "power2.in"
-                            }, {
-                                y: -window.innerHeight * .46,
-                                scale: .075,
-                                duration: .4,
-                                ease: "power1.out"
-                            }, {
-                                y: -window.innerHeight * .415,
-                                scale: .07,
-                                duration: .35,
-                                ease: "power1.in"
-                            }, {
-                                y: -window.innerHeight * .425,
-                                scale: .068,
-                                duration: .3,
-                                ease: "power1.out"
-                            }]
-                        }, 7.0);
-                }
-                return tl;
             }
 
             /* ------------------------------------------------------------------
-               Modus wählen: Video, sobald Metadaten da sind – sonst CSS-Szene.
+               Timeline läuft SOFORT – Titel, Karten-Paare und Finale brauchen
+               kein Video. Der Video-Scrub wird nachgereicht, sobald er da ist.
                ------------------------------------------------------------------ */
-            let initialized = false;
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#pov-stage",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    onUpdate(self) {
+                        final_.classList.toggle("is-live", self.progress > 0.8);
+                    }
+                }
+            });
 
-            function initHero(mode) {
-                if (initialized) return;
-                initialized = true;
-                if (mode === "video") pin.classList.add("is-video");
-                buildTimeline(mode);
+            /* Titel verabschiedet sich, bevor die erste Karte kommt */
+            tl.to("#pov-title", {
+                    opacity: 0,
+                    y: -60,
+                    ease: "power1.in",
+                    duration: .9
+                }, .4)
+                .to("#pov-hint", {
+                    opacity: 0,
+                    duration: .4
+                }, .3);
+
+            /* Drei Karten-Paare nacheinander – nie gleichzeitig mit Titel/Finale */
+            const slots = [
+                [1.6, 3.2],
+                [3.8, 5.4],
+                [6.0, 7.4]
+            ];
+            CARDS.forEach((pair, i) => {
+                const tIn = slots[i][0],
+                    tOut = slots[i][1];
+                tl.fromTo(pair[0], {
+                        x: -160,
+                        opacity: 0
+                    }, {
+                        x: 0,
+                        opacity: 1,
+                        ease: "power3.out",
+                        duration: .7
+                    }, tIn)
+                    .fromTo(pair[1], {
+                        x: 160,
+                        opacity: 0
+                    }, {
+                        x: 0,
+                        opacity: 1,
+                        ease: "power3.out",
+                        duration: .7
+                    }, tIn + .25)
+                    .to(pair[0], {
+                        x: -160,
+                        opacity: 0,
+                        ease: "power2.in",
+                        duration: .6
+                    }, tOut)
+                    .to(pair[1], {
+                        x: 160,
+                        opacity: 0,
+                        ease: "power2.in",
+                        duration: .6
+                    }, tOut + .15);
+            });
+
+            /* Finale – erscheint erst, wenn alle Karten draußen sind */
+            tl.to("#pov-veil", {
+                    opacity: 1,
+                    duration: 1.1
+                }, 8.0)
+                .fromTo("#pov-final", {
+                    opacity: 0,
+                    scale: .92
+                }, {
+                    opacity: 1,
+                    scale: 1,
+                    ease: "power3.out",
+                    duration: 1.1
+                }, 8.3)
+                .to({}, {
+                    duration: .7
+                });
+
+            /* ------------------------------------------------------------------
+               Video nachladen: als Blob (unabhängig von Range-Support seekbar).
+               Erfolg → Loader weich ausblenden, Scrub in die Timeline hängen.
+               Fehler → Loader bleibt als ruhiger Hintergrund, Caption weg.
+               ------------------------------------------------------------------ */
+            let videoAttached = false;
+
+            function attachVideo() {
+                if (videoAttached || !video.duration) return;
+                videoAttached = true;
+                pin.classList.add("is-video");
+                tl.to(video, {
+                    currentTime: Math.max(0, video.duration - 0.05),
+                    ease: "none",
+                    duration: 9.3
+                }, 0);
                 ScrollTrigger.refresh();
             }
 
+            function loaderOnly() {
+                if (videoAttached) return;
+                if (caption) caption.style.display = "none";
+            }
+
             if (video) {
-                /* Als Blob laden: Blob-URLs sind unabhängig von Server-Range-Support
-                   immer voll seekbar – Voraussetzung fürs Scroll-Scrubbing. */
                 const srcEl = video.querySelector("source");
                 const srcUrl = srcEl ? srcEl.getAttribute("src") : null;
-                const fallbackTimer = setTimeout(() => initHero("css"), 6000);
+                const failTimer = setTimeout(loaderOnly, 12000);
 
                 function useVideo() {
-                    clearTimeout(fallbackTimer);
-                    if (video.readyState >= 1 && video.duration) initHero("video");
+                    clearTimeout(failTimer);
+                    if (video.readyState >= 1 && video.duration) attachVideo();
                     else {
-                        video.addEventListener("loadedmetadata", () => initHero("video"), {
+                        video.addEventListener("loadedmetadata", attachVideo, {
                             once: true
                         });
-                        video.addEventListener("error", () => initHero("css"), {
+                        video.addEventListener("error", loaderOnly, {
                             once: true
                         });
                     }
@@ -768,7 +600,7 @@
                     useVideo();
                 }
             } else {
-                initHero("css");
+                loaderOnly();
             }
         })();
     </script>
